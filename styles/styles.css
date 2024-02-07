@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap');
+
+/* font-family: 'Raleway', sans-serif; */
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: auto;
+    height: 30rem;
+    background-color: #FAFAFA;
+}
+
+header, .navbar{
+    font-family: 'Raleway', sans-serif;
+    color: rgb(53, 53, 53);
+    text-align: center;
+}
+
+header{
+    padding-top:5rem;
+    margin-bottom: 0;
+    /* Need at least 45 rem, or side border split on marky animation */
+    min-height:45rem;
+
+}
+
+main {
+    height: 150rem;
+}
+
+main, header{
+    width: 80%;
+    max-width: 1024px;
+    min-width: 900px;
+    margin: 0 auto;
+    border-left: 0.7px solid;
+    border-right: 0.7px solid;
+}
+
+.intro p{
+    text-indent: 3rem;
+    padding-left:10rem;
+    padding-right: 10rem;
+    line-height: 1.5rem;
+}
+
+
+
+p {
+    margin-top: 0;
+}
+
+header h1{
+    padding-top: 5rem;
+    font-size: 3.5em;
+}
+
+header h3{
+    font-size: 1.5em;
+}
+
+.navbar {
+    position: absolute;
+    display: inline;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 500px;
+    min-height: 3rem;
+    margin-bottom: 2rem;
+    background: white;
+    border: 0.7px solid;
+}
+
+.navbar p {
+    display: inline;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    white-space: nowrap;
+    width: 12rem;
+    line-height: 3rem;
+    transition: 500ms;
+}
+
+.navbar p:hover{
+    background-color: rgb(196, 196, 196, 0.2);
+    /* Use outline instead of border so inline elements don't shift! */
+    outline: 0.2px solid; 
+    cursor: pointer;
+    transition: 300ms;    
+}
+
+.navbar p:active{
+    color:#FAFAFA;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+}
+
+
+.grid-container{
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+    /* background: red; */
+    /* height: 30rem; */
+    grid-row-gap: 1rem;
+    padding-top: 5rem;
+}
+
+.grid-item{
+    /* background-color: red; */
+    margin: 1rem;
+    height: 23rem;
+    padding-left: 1rem;
+    /* outline: 0.2px solid rgb(196, 196, 196, 1); */
+    /* box-shadow: 0px 2px 10px 5px rgba(62, 62, 62, 0.5); */
+    overflow: hidden;
+}
+
+.grid-item h1 {
+    font-size: 4rem;
+    color: rgb(53, 53, 53);
+    margin-top: 0;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.grid-item .tops{
+    padding-top: 2.3rem;
+    line-height: 1.5rem;
+}
+
+.grid-item img{
+    height: 60px;
+    justify-content: center;
+    display: inline-block;
+    padding-top: 0;
+}
+
+#tooltip-p{
+    display: inline-block;
+    margin-top: 0;
+    padding-left: 1rem;
+    padding-top: 0;
+}
+
+.below-tooltip {
+    padding-top: 0.5rem;
+    
+}
+
+.closing-p{
+    padding-top: 0.8rem;
+}
+
+.markydiv {
+    background: url("../images/computer-smash-other-guys-Mark-Wahlberg-angry-static.png");
+    height: 120px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 450ms;
+}
+
+.markydiv:hover {
+    background: url("../images/computer-smash-other-guys-Mark-Wahlberg-angry.gif");
+    height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: 450ms;
+}
+
+input {
+    background: url("../images/searchsmall.png") center left 3px     no-repeat;
+    border: none;
+    height:30px;
+    padding-left:35px; 
+    outline: 3px solid #ddd;
+    width: 20.5rem;
+}
+
+footer a{
+    color: rgb(53, 53, 53, 0.6);
+}
+
+.return p{
+    text-align: center;
+    padding-top: 2rem;
+
+}
+
+.return a{
+    color: rgb(53, 53, 53, 1);
+}
+
+.return a:hover {
+    color: rgb(101, 101, 101);
+}
+
+.return a:active {
+    color: rgb(181, 181, 181);
+}
+
+footer {
+    padding-top: 5rem;
+    text-align: center;
+    height: 15rem;
+    max-width: 1024px;
+    min-width: 900px;
+    margin: 0 auto;
+    color: rgb(53, 53, 53, 0.6);
+
+}
+
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #3ec965; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+  
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+  }
+
+/*get the navbar working more accurately (and not get covered by nav)*/
+.scroll-adjust {
+    position: relative;
+    top: -100px;
+
+}
+
